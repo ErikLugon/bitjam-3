@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://doqpcc044j2ai"]
+
+[ext_resource type="Script" uid="uid://c128eq4fq8f4i" path="res://Scripts/Main.gd" id="1_1uquc"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_1uquc")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 529.0
+offset_right = 274.5
+offset_bottom = 633.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "Pantheon
+"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 547.0
+offset_right = 998.0
+offset_bottom = 578.0
+size_flags_stretch_ratio = 0.0
+text = "Rituals
+"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 462.0
+offset_right = 730.0
+offset_bottom = 493.0
+size_flags_stretch_ratio = 0.0
+text = "Animals"
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 954.0
+offset_top = 301.0
+offset_right = 1014.0
+offset_bottom = 332.0
+text = "Blood
+"
+
+[node name="pop_label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 511.0
+offset_bottom = 33.0
+text = "População: "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 2.0
+offset_top = 42.0
+offset_right = 98.0
+offset_bottom = 217.0
+alignment = 1
+
+[node name="health_label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Health"
+
+[node name="econ_label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Economy"
+
+[node name="militar_label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Military"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
